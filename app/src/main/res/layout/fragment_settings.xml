@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 档案 -->
+        <LinearLayout
+            style="@style/SettingCard"
+            android:orientation="vertical">
+
+            <TextView style="@style/SettingTitle" android:text="课表档案" />
+
+            <TextView
+                android:id="@+id/tvProfileInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnImport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="导入档案" />
+
+                <Button
+                    android:id="@+id/btnSample"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="内置示例" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnProfiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="档案管理（当前：我的课表）" />
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="编辑科目 / 时间表 / 课表" />
+
+            <Button
+                android:id="@+id/btnTemp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="临时调课（考试周 / 运动会换课表）" />
+        </LinearLayout>
+
+        <!-- 周次 -->
+        <LinearLayout
+            style="@style/SettingCard"
+            android:orientation="vertical">
+
+            <TextView style="@style/SettingTitle" android:text="周次（单双周轮换）" />
+
+            <TextView
+                android:id="@+id/tvCurWeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnFirstWeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="设置第 1 周基准日期" />
+        </LinearLayout>
+
+        <!-- 灵动岛悬浮窗 -->
+        <LinearLayout
+            style="@style/SettingCard"
+            android:orientation="vertical">
+
+            <TextView style="@style/SettingTitle" android:text="灵动岛悬浮窗" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="在屏幕顶部常驻显示课表与倒计时"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swIsland"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvIslandMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/brand_dark"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="上课状态常驻通知（无需悬浮窗权限，锁屏也能看倒计时）"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 悬浮窗圆角（仿官方：可调 0~40dp） -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="悬浮窗圆角"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvCorner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/brand_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnCornerMinus"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:text="－" />
+
+                <Button
+                    android:id="@+id/btnCornerPlus"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:text="＋" />
+            </LinearLayout>
+
+            <!-- 悬浮窗大小（0.7~1.6 倍） -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="悬浮窗大小"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvScale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/brand_dark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnScaleMinus"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:text="－" />
+
+                <Button
+                    android:id="@+id/btnScalePlus"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:text="＋" />
+
+                <Button
+                    android:id="@+id/btnScaleReset"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="复位" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBreakLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="课间显示文字：课间休息" />
+
+            <TextView
+                android:id="@+id/tvIslandPerm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnOverlayPerm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="授予悬浮窗权限（显示在其他应用上层）" />
+
+            <Button
+                android:id="@+id/btnResetPos"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="重置悬浮窗位置到顶部居中" />
+        </LinearLayout>
+
+        <!-- 提醒 -->
+        <LinearLayout
+            style="@style/SettingCard"
+            android:orientation="vertical">
+
+            <TextView style="@style/SettingTitle" android:text="上下课提醒" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="启用提醒通知"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swAlerts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="放学提醒"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swAfterSchool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="震动提醒"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swVibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRingtone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="提醒铃声：系统默认" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="预备铃提前分钟数"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnPrepMinus"
+                    android:layout_width="48dp"
+                    android:layout_height="44dp"
+                    android:minWidth="0dp"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/tvPrep"
+                    android:layout_width="44dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#1F2937"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnPrepPlus"
+                    android:layout_width="48dp"
+                    android:layout_height="44dp"
+                    android:minWidth="0dp"
+                    android:text="+" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnTestNotify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="发送一条测试通知" />
+        </LinearLayout>
+
+        <!-- 关于 -->
+        <LinearLayout
+            style="@style/SettingCard"
+            android:orientation="vertical">
+
+            <TextView style="@style/SettingTitle" android:text="关于" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:text="课表岛（ClassIsland Mobile）是 ClassIsland 桌面课表的非官方安卓适配版，可读取官方档案（JSON / 导出的 zip）。\n\n上游项目：github.com/ClassIsland/ClassIsland\n协议：GPL-3.0\n\n提示：鸿蒙 / 国产系统请在系统管家中允许本应用「开机自启动」与「后台运行」，提醒才会准时。"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

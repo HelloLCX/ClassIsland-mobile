@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#1E88E5</color>
+    <color name="brand_dark">#1565C0</color>
+    <color name="brand_accent">#26C6DA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="page_bg">#F2F5F9</color>
+    <color name="island_bg">#1F2937</color>
+    <color name="in_class">#22C55E</color>
+    <color name="break_time">#F59E0B</color>
+    <color name="after_school">#94A3B8</color>
+    <color name="text_secondary">#9CA3AF</color>
+    <color name="chip_bg">#EAF3FE</color>
+    <color name="ic_launcher_background">#1E88E5</color>
+</resources>

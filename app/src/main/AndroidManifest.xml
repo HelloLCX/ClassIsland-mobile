@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".ClassIslandApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_compat"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_compat"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClassIsland">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".CrashActivity"
+            android:exported="false"
+            android:process=":crash"
+            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+
+        <activity
+            android:name=".ui.EditActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClassIsland" />
+
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClassIsland" />
+
+        <activity
+            android:name=".ui.StatsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClassIsland" />
+
+        <activity
+            android:name=".ui.TempOverrideActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClassIsland" />
+
+        <service
+            android:name=".overlay.OverlayService"
+            android:exported="false"
+            android:stopWithTask="false" />
+
+        <receiver
+            android:name=".widget.ScheduleWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED" />
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_schedule_info" />
+        </receiver>
+
+        <receiver
+            android:name=".alert.AlertReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".alert.BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

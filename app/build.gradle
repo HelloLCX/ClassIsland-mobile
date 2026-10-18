@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'tech.classisland.mobile'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "tech.classisland.mobile"
+        minSdk 23
+        targetSdk 33
+        versionCode 4
+        versionName "1.6.0"
+        vectorDrawables { useSupportLibrary true }
+        multiDexEnabled true
+    }
+
+    // 三个发布版本（见 README「版本矩阵」）：
+    //   arm32  — Android 6.0(API 23)+ 32 位设备
+    //   arm64  — Android 6.0(API 23)+ 64 位设备
+    //   island — Android 10(API 29)+ ，灵动岛适配（信息贴合系统挖孔显示）
+    flavorDimensions "variant"
+    productFlavors {
+        arm32 {
+            dimension "variant"
+            minSdk = 23
+            versionNameSuffix "-arm32"
+            ndk { abiFilters "armeabi-v7a" }
+        }
+        arm64 {
+            dimension "variant"
+            minSdk = 23
+            versionNameSuffix "-arm64"
+            ndk { abiFilters "arm64-v8a" }
+        }
+        island {
+            dimension "variant"
+            minSdk = 29
+            versionNameSuffix "-island"
+            ndk { abiFilters "armeabi-v7a", "arm64-v8a", "x86_64" }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'androidx.fragment:fragment-ktx:1.6.1'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20231013'
+}

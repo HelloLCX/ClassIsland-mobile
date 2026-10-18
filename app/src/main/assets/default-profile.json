@@ -1,0 +1,121 @@
+{
+  "Name": "内置示例档案",
+  "Subjects": {
+    "aaaaaaaa-0001-0000-0000-000000000001": { "Name": "语文", "Initial": "语", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-000000000002": { "Name": "数学", "Initial": "数", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-000000000003": { "Name": "英语", "Initial": "英", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-000000000004": { "Name": "物理", "Initial": "物", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-000000000005": { "Name": "化学", "Initial": "化", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-000000000006": { "Name": "生物", "Initial": "生", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-000000000007": { "Name": "政治", "Initial": "政", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-000000000008": { "Name": "历史", "Initial": "史", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-000000000009": { "Name": "地理", "Initial": "地", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-00000000000a": { "Name": "体育", "Initial": "体", "TeacherName": "", "IsOutDoor": true },
+    "aaaaaaaa-0001-0000-0000-00000000000b": { "Name": "音乐", "Initial": "音", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-00000000000c": { "Name": "美术", "Initial": "美", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-00000000000d": { "Name": "信息技术", "Initial": "信", "TeacherName": "", "IsOutDoor": false },
+    "aaaaaaaa-0001-0000-0000-00000000000e": { "Name": "班会", "Initial": "班", "TeacherName": "", "IsOutDoor": false }
+  },
+  "TimeLayouts": {
+    "bbbbbbbb-0002-0000-0000-000000000001": {
+      "Name": "标准作息",
+      "Layouts": [
+        { "StartSecond": "2024-01-01T08:00:00", "EndSecond": "2024-01-01T08:45:00", "TimeType": 0 },
+        { "StartSecond": "2024-01-01T08:45:00", "EndSecond": "2024-01-01T08:55:00", "TimeType": 1 },
+        { "StartSecond": "2024-01-01T08:55:00", "EndSecond": "2024-01-01T09:40:00", "TimeType": 0 },
+        { "StartSecond": "2024-01-01T09:40:00", "EndSecond": "2024-01-01T10:10:00", "TimeType": 1 },
+        { "StartSecond": "2024-01-01T10:10:00", "EndSecond": "2024-01-01T10:55:00", "TimeType": 0 },
+        { "StartSecond": "2024-01-01T10:55:00", "EndSecond": "2024-01-01T11:05:00", "TimeType": 1 },
+        { "StartSecond": "2024-01-01T11:05:00", "EndSecond": "2024-01-01T11:50:00", "TimeType": 0 },
+        { "StartSecond": "2024-01-01T11:50:00", "EndSecond": "2024-01-01T14:00:00", "TimeType": 2 },
+        { "StartSecond": "2024-01-01T14:00:00", "EndSecond": "2024-01-01T14:45:00", "TimeType": 0 },
+        { "StartSecond": "2024-01-01T14:45:00", "EndSecond": "2024-01-01T14:55:00", "TimeType": 1 },
+        { "StartSecond": "2024-01-01T14:55:00", "EndSecond": "2024-01-01T15:40:00", "TimeType": 0 },
+        { "StartSecond": "2024-01-01T15:40:00", "EndSecond": "2024-01-01T15:50:00", "TimeType": 1 },
+        { "StartSecond": "2024-01-01T15:50:00", "EndSecond": "2024-01-01T16:35:00", "TimeType": 0 },
+        { "StartSecond": "2024-01-01T16:35:00", "EndSecond": "2024-01-01T16:45:00", "TimeType": 1 },
+        { "StartSecond": "2024-01-01T16:45:00", "EndSecond": "2024-01-01T17:30:00", "TimeType": 0 }
+      ]
+    }
+  },
+  "ClassPlans": {
+    "cccccccc-0003-0000-0000-000000000001": {
+      "Name": "周一课表", "TimeLayoutId": "bbbbbbbb-0002-0000-0000-000000000001",
+      "TimeRule": { "WeekDay": 1, "WeekCountDiv": 0, "WeekCountDivTotal": 0 },
+      "Classes": [
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000001" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000002" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000003" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000004" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000a" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000007" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000008" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000e" }
+      ],
+      "IsEnabled": true, "IsOverlay": false
+    },
+    "cccccccc-0003-0000-0000-000000000002": {
+      "Name": "周二课表", "TimeLayoutId": "bbbbbbbb-0002-0000-0000-000000000001",
+      "TimeRule": { "WeekDay": 2, "WeekCountDiv": 0, "WeekCountDivTotal": 0 },
+      "Classes": [
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000002" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000001" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000006" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000005" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000003" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000009" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000c" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000b" }
+      ],
+      "IsEnabled": true, "IsOverlay": false
+    },
+    "cccccccc-0003-0000-0000-000000000003": {
+      "Name": "周三课表", "TimeLayoutId": "bbbbbbbb-0002-0000-0000-000000000001",
+      "TimeRule": { "WeekDay": 3, "WeekCountDiv": 0, "WeekCountDivTotal": 0 },
+      "Classes": [
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000003" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000004" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000002" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000001" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000005" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000007" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000a" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000d" }
+      ],
+      "IsEnabled": true, "IsOverlay": false
+    },
+    "cccccccc-0003-0000-0000-000000000004": {
+      "Name": "周四课表", "TimeLayoutId": "bbbbbbbb-0002-0000-0000-000000000001",
+      "TimeRule": { "WeekDay": 4, "WeekCountDiv": 0, "WeekCountDivTotal": 0 },
+      "Classes": [
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000001" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000002" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000003" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000008" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000006" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000009" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000005" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000d" }
+      ],
+      "IsEnabled": true, "IsOverlay": false
+    },
+    "cccccccc-0003-0000-0000-000000000005": {
+      "Name": "周五课表", "TimeLayoutId": "bbbbbbbb-0002-0000-0000-000000000001",
+      "TimeRule": { "WeekDay": 5, "WeekCountDiv": 0, "WeekCountDivTotal": 0 },
+      "Classes": [
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000002" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000003" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000001" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000004" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-000000000007" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000a" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000b" },
+        { "SubjectId": "aaaaaaaa-0001-0000-0000-00000000000c" }
+      ],
+      "IsEnabled": true, "IsOverlay": false
+    }
+  },
+  "IsOverlayClassPlanEnabled": false,
+  "OverlayClassPlanId": null,
+  "TempClassPlanId": null
+}
