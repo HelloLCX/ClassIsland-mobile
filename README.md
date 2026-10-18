@@ -1,0 +1,2 @@
+# ClassIsland-mobile
+基于ClassIsland使用AI开发的第三方ClassIsland安卓版客户端
